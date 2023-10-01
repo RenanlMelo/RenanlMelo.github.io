@@ -19,9 +19,10 @@ body {
     background: url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80") no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
-header {
+#cabecalho {
     position: fixed;
     top: 0;
     left: 0;
@@ -293,4 +294,75 @@ header {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+.btnMenu {
+    width: 35px;
+    height: 35px;
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    color: #ffffff;
+}
+
+#menuIcon {
+    font-size: 35px;
+}
+
+@media (max-width: 900px) {
+    .btnMenu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation .btnLogin-popup {
+        border: 0;
+        border-radius: 0;
+        padding: 2vw 0 2vw 0;
+        margin: 0;
+        outline: none;
+        position: relative;
+        font-size: 1.1em;
+        font-weight: 500;
+        box-sizing: content-box;
+        height: 26px;
+        width: fit-content;
+        cursor: pointer;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .navigation .btnLogin-popup:hover {
+        transform: scale(1);
+        color: #ffffff;
+        background: #142633;
+    }
+
+    .navigation.active-menu a {
+        margin: 0;
+        padding: 2vw 0;
+        border: 100vw;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .navigation.active-menu a::after {
+        background-color:  transparent;
+    }
+
+    .navigation.active-menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        padding: 0;
+        background-color: #142633;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+        height: calc(100vh - 60px);
+        top: 60px;
+    }
 }

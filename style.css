@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     width: 94vw;
-    padding: 1.55vw 3vw;
+    padding: 1.7vw 3vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,12 +131,16 @@ body {
 
 .wrapper .form-box {
     width: 100%;
+    height: 100%;
     padding: 40px;
+    background-color: #c3bea2;
+    margin: 60px 0 0 0;
 }
 
 .wrapper .form-box.login {
     transition: transform .18s ease;
     transform: translateX(0);
+
 }
 
 .wrapper.active .form-box.login {
@@ -154,6 +158,7 @@ body {
 .wrapper.active .form-box.register {
     transition: transform .18s ease;
     transform: translateX(0);
+
 }
 
 
@@ -282,7 +287,7 @@ body {
     color: #162938;
     text-align: center;
     font-weight: 500;
-    margin: 25px 0 10px;
+    margin: 0;
 }
 
 .login-register p a {
@@ -291,9 +296,12 @@ body {
     text-decoration: none;
 }
 
-
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+.login-register {
+    margin: 10px 0 0 0;
 }
 
 .btnMenu {
@@ -313,6 +321,10 @@ body {
     .btnMenu {
         display: block;
     }
+
+    #cabecalho { 
+        padding: 2.5vw 3vw
+    }
     
     .navigation {
         display: flex;
@@ -325,7 +337,7 @@ body {
         flex-direction: column;
         align-items: left;
         width: 100%;
-        top: 60px;
+        top: 70px;
         overflow-y: hidden;
         visibility: hidden;
         position: fixed;
@@ -369,6 +381,22 @@ body {
         overflow-y: auto;
         visibility: visible;
         transition: all .6s;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 70px);
     }
 }
+
+@media (max-width: 480px){
+    .navigation {
+        top: 55px;
+    }
+    .navigation.active-menu {
+        height: calc(100vh - 55px);
+    }
+}
+
+/* ABOUT */
+/* #about {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+} */

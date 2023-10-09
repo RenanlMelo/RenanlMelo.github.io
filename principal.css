@@ -432,20 +432,36 @@ a {
 }
 
 @media (max-width: 480px){
-    
+    * {
+        margin: 0;
+    }
+
     #cabecalho {
         justify-content: space-around;
+        height: 12vh;
     }
 
     .navigation {
         right: 0;
-        top: calc(17.5vh + 5vw);
+        top: calc(12vh + 5vw);
         width: 45vw;
         height: calc(50vh - 55px);
     }
 
     .wrapper.active-popup {
         width: 95%;
+    }
+
+    .navigation.active-menu a{
+        font-size: 3.5vw;
+    }
+
+    .navigation.active-menu button{
+        font-size: 3.5vw;
+    }
+
+    .scroll-section, .scroll-section section {
+        width: 100%;
     }
 }
 

@@ -1,0 +1,24 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+}
+
+
+
+
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 94vw;
+    height: 17.5vh;
+    padding: 0 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background: #162938a6;
+    backdrop-filter: blur(15px);
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="principal.css">
+    <title>Contruchó - Upx</title>
+</head>
+<body>
+    <div class="back">
+        <header id="cabecalho">
+            <h2 id="logo">Construchó</h2>
+            <button class="btnMenu"><ion-icon name="menu" id="menuIcon"></ion-icon></button>
+            <nav class="navigation">
+                    <a class="nav" href="#home">Home</a>
+                    <a class="nav" href="#about">About</a>
+                    <a class="nav" href="#items">Items</a>
+                    <a class="nav" href="#contact">Contact</a>
+                    <button class="btnLogin-popup">Login</button>
+                    <ion-icon type="button" name="person-circle" class="iconUser"></ion-icon>
+                    <div class="userPopup">
+                        <p><a href="perfil.html">User</a></p>
+                        <p id="newPost"> New Post</p>
+                        <p class="signOut"> Sign Out </p>
+                    </div>
+                </nav>
+            </header>
+            
+            <div class="popup-box">
+                
+                <div class="wrapper">
+                    <span class="close">
+                        <ion-icon name="close"></ion-icon>
+                    </span>
+                    <!-- LOGIN -->
+                    <div class="form-box login">
+                        <h2>Login</h2>
+                        <form action="#home" method="post" id="alertLogin">
+                            <div class="input-box">
+                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                <input type="email" name="email-login" required>
+                                <label>Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                <input type="password" name="password-login" required>
+                                <label>Password</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox">
+                                    Remember me
+                                </label>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                            <button type="button" class="btn1">Login</button>
+                            <div class="login-register">
+                                <p>Don't have an account? <a href="#" class="registerLink">Register</a></p>
+                        </div>
+                    </form>
+                    
+                </div>
+                
+                <!-- REGISTER -->
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="#home" method="post" id="alertReg">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="person"></ion-icon></span>
+                            <input type="text" name="username" class="username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" name="email-register" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" name="passwor-register" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">
+                                I agree to the terms & conditions
+                            </label>
+                        </div>
+                        <button type="button" class="btn2">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="loginLink">Login</a></p>
+                        </div>
+                    </form>
+                    
+                    </div>
+                
+                </div> 
+            </div><!-- div box -->
+            <div class="scroll-section">
+                <section class="section" id="home"></section>
+                <section class="section" id="about"><div class="text"><h1>Brechó de Materiais de Construção</h1></div></section>
+                <section class="section" id="items"></section>
+                <section class="section" id="contact"></section>
+            </div>
+            <div id="list"> 
+                <div id="postPopup">
+                    <input type="text" id="itemName">
+                    <input type="text" id="descPost">
+                    <input type="file" accept="image/*" id="picture">
+                    <button id="btnAdd">Post</button>
+                </div>
+            </div>
+    </div>
+    
+    <script src="principal.js"></script>
+   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

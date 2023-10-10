@@ -1,6 +1,7 @@
 const wrapper = document.querySelector('.wrapper');
 const box = document.querySelector('.popup-box');
 const back = document.querySelector('.back');
+const header = document.getElementById("cabecalho");
 const loginLink = document.querySelector('.loginLink');
 const registerLink = document.querySelector('.registerLink');
 const btnPopup = document.querySelector('.btnLogin-popup');
@@ -23,6 +24,13 @@ btnPopup.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup');
     box.classList.add('active-popup');
     back.classList.add('active-blur');
+    header.classList.add('active');
+    document.body.style.overflowY = "hidden";
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
 });
 
 closePopup.addEventListener('click', ()=> {
@@ -30,6 +38,8 @@ closePopup.addEventListener('click', ()=> {
     wrapper.classList.remove('active');
     box.classList.remove('active-popup');
     back.classList.remove('active-blur');
+    header.classList.remove('active');
+    document.body.style.overflowY = "visible";
 });
 
 const alertLogin = document.getElementById("alertLogin");
@@ -91,6 +101,8 @@ const userPopup = document.querySelector('.userPopup');
      btnPopup.classList.add('active');
      btnPopup.textContent = "";
      icon.classList.add('active');
+     header.classList.remove('active');
+     document.body.style.overflowY = "visible";
  });
 
  btn2.addEventListener('click', ()=> {
@@ -101,6 +113,8 @@ const userPopup = document.querySelector('.userPopup');
      btnPopup.classList.add('active');
      btnPopup.textContent = "";
      icon.classList.add('active');
+     header.classList.remove('active');
+     document.body.style.overflowY = "visible";
 });
 
 icon.addEventListener('click', ()=> {
@@ -124,5 +138,3 @@ function inicia(){
 window.addEventListener("load", inicia);
 
 const newPost = document.getElementById("list");
-
-

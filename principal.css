@@ -39,6 +39,11 @@ a {
     z-index: 2;
     background: #162938a6;
     backdrop-filter: blur(15px);
+    transition: .3s;
+}
+
+#cabecalho.active{
+    filter: blur(15px);
 }
 
 #logo {
@@ -131,6 +136,7 @@ a {
     position: absolute;
     z-index: -1;
     transition: .3s;
+
 }
 
 .wrapper.active-popup.active {
@@ -143,6 +149,7 @@ a {
 }
 
 .back.active-blur {
+    z-index: 90;
     backdrop-filter: blur(15px);
     transition: .3s ease;
 }
@@ -370,7 +377,7 @@ a {
 
     #cabecalho { 
         padding: 2.5vw 3vw;
-        justify-content: space-between ;
+        justify-content: space-between;
     }
     
     #logo {
@@ -626,9 +633,8 @@ section {
 #list {
     display: none;
     background: white;
-    position: fixed;
+    position: absolute;
     top: 50%;
     width: 100%;
     height: 50%;
 }
-

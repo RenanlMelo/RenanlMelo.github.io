@@ -35,16 +35,24 @@
                     <!-- LOGIN -->
                     <div class="form-box login">
                         <h2>Login</h2>
-                        <form action="#home" method="post" id="alertLogin">
+                        <form action="#home" method="post" class="alertLogin">
                             <div class="input-box">
                                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                                <input type="email" name="email-login" required>
+                                <input type="email" id="email-login">
                                 <label>Email</label>
+                                <small class="small">Error message</small>
+                                <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                                <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
                             </div>
                             <div class="input-box">
                                 <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                                <input type="password" name="password-login" required>
+                                <input type="password" id="password-login">
                                 <label>Password</label>
+                                <small class="small">Error message</small>
+                                <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                                <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
                             </div>
                             <div class="remember-forgot">
                                 <label><input type="checkbox">
@@ -52,7 +60,7 @@
                                 </label>
                                 <a href="#">Forgot Password?</a>
                             </div>
-                            <button type="button" class="btn1">Login</button>
+                            <button type="submit" class="btn1">Login</button>
                             <div class="login-register">
                                 <p>Don't have an account? <a href="#" class="registerLink">Register</a></p>
                         </div>
@@ -63,28 +71,40 @@
                 <!-- REGISTER -->
                 <div class="form-box register">
                     <h2>Registration</h2>
-                    <form action="#home" method="post" id="alertReg">
+                    <form action="#home" method="post" class="alertReg">
                         <div class="input-box">
                             <span class="icon"><ion-icon name="person"></ion-icon></span>
-                            <input type="text" name="username" class="username" required>
+                            <input type="text" id="username" class="username">
                             <label>Username</label>
+                            <small class="small">Error message</small>
+                            <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                            <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
                         </div>
                         <div class="input-box">
                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                            <input type="email" name="email-register" required>
+                            <input type="email" id="email-register">
                             <label>Email</label>
+                            <small class="small">Error message</small>
+                            <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                            <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
                         </div>
                         <div class="input-box">
                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                            <input type="password" name="passwor-register" required>
+                            <input type="password" id="password-register">
                             <label>Password</label>
+                            <small class="small">Error message</small>
+                            <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                            <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
                         </div>
                         <div class="remember-forgot">
                             <label><input type="checkbox">
                                 I agree to the terms & conditions
                             </label>
                         </div>
-                        <button type="button" class="btn2">Register</button>
+                        <button type="submit" class="btn2">Register</button>
                         <div class="login-register">
                             <p>Already have an account? <a href="#" class="loginLink">Login</a></p>
                         </div>
@@ -109,14 +129,7 @@
                 <section class="section" id="items"></section>
                 <section class="section" id="contact"></section>
             </div>
-            <div id="list"> 
-                <div id="postPopup">
-                    <input type="text" id="itemName">
-                    <input type="text" id="descPost">
-                    <input type="file" accept="image/*" id="picture">
-                    <button id="btnAdd">Post</button>
-                </div>
-            </div>
+            
         
     </div>
     
@@ -126,3 +139,4 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+

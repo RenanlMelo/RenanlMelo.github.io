@@ -40,37 +40,124 @@ closePopup.addEventListener('click', ()=> {
     back.classList.remove('active-blur');
     header.classList.remove('active');
     document.body.style.overflowY = "visible";
+    eraseInputs();
 });
 
-const alertLogin = document.getElementById("alertLogin");
-const alertReg = document.getElementById("alertReg");
+function eraseInputs() {
+    var forms = document.querySelector('.popup-box');
+    var inputs = forms.querySelectorAll('input');
 
-// btn1.addEventListener("submit", function(event){
-//     var campoEmail1 = document.getElementsByName("email-login")[1].value;
-//     var campoPass1 = document.getElementsByName("password-login")[1].value;
-//     if(campoEmail1.trim() === null || campoPass1.trim() === null) {
-//         event.preventDefault();
-//         alert("Todos os campos são obrigatórios. Por favor, preencha-os");
-//         console.log(foi);
-//     }
-//     else{
-//         console.log(foi);
-//         btn1.addEventListener('click', ()=> {
-//             wrapper.classList.remove('active-popup');
-//             box.classList.remove('active-popup');
-//             back.classList.remove('active-blur'); 
-//             btnPopup.classList.add('active');
-//             btnPopup.textContent = "";
-//             icon.classList.add('active');
-//         });
-//     }
-// });
+    for(var i = 0; i < inputs.length; i++){
+        inputs[i].value = '';
+    }
+}
+
+const alertLogin = document.querySelector('.alertLogin');
+const alertReg = document.querySelector('.alertReg');
+
+var campoEmail1 = document.getElementById('email-login')
+var campoPass1 = document.getElementById('password-login')
+
+var campoUser = document.getElementById('username')
+var campoEmail2 = document.getElementById('email-register')
+var campoPass2 = document.getElementById('password-register')
+
+alertLogin.addEventListener('submit', (e) => {
+    
+    e.preventDefault();
+
+    checkInputsLogin();
+});
+
+alertReg.addEventListener('submit', (e) => {
+    
+    e.preventDefault();
+
+    checkInputsRegister();
+});
+
+
+function checkInputsLogin() {
+   
+    const campoEmail1Value = campoEmail1.value.trim();
+    const campoPass1Value = campoPass1.value.trim();
+       
+    if(campoEmail1Value === '') {
+        errorValidation(campoEmail1, 'Preencha esse campo')
+    }
+
+    else {
+        successValidation(campoEmail1)
+    }
+
+    if(campoPass1Value === '') {
+        errorValidation(campoPass1, 'Preencha esse campo');
+    }
+    
+    else {
+        successValidation(campoPass1)
+    }
+}
+
+function checkInputsRegister() {
+   
+    const campoUserValue = campoUser.value.trim();
+    const campoEmail2Value = campoEmail2.value.trim();
+    const campoPass2Value = campoPass2.value.trim();
+       
+    if(campoUserValue === '') {
+        errorValidation(campoUser, 'Preencha esse campo')
+        alert('a');
+    }
+    
+    else {
+        successValidation(campoUser)
+    }
+
+    if(campoEmail2Value === '') {
+        errorValidation(campoEmail2, 'Preencha esse campo')
+    }
+    
+    else {
+        successValidation(campoEmail2)
+    }
+
+    if(campoPass2Value === '') {
+        errorValidation(campoPass2, 'Preencha esse campo')
+    }
+    
+    else {
+        successValidation(campoPass2)
+    }
+
+}
+
+function errorValidation(input, message) {
+    const formControlDiv = input.parentElement;
+
+    formControlDiv.className = 'input-box error';
+    
+    const small = formControlDiv.querySelector('small');
+    
+    small.innerText = message
+}
+
+function successValidation(input) {
+    const formControlDiv = input.parentElement;
+
+    formControlDiv.className = 'input-box success';
+    
+    const small = formControlDiv.querySelector('small');
+    small.textContent = "";
+
+}
+
+const icon = document.querySelector('.iconUser');
+const userPopup = document.querySelector('.userPopup');
+
 
 // btn2.addEventListener("submit", function(event){
-//     var campoUser = document.getElementsByName("username")[0].value;
-//     var campoEmail2 = document.getElementsByName("email-register")[0].value;
-//     var campoPass2 = document.getElementsByName("password-register")[0].value;
-//     if(campoUser.trim() === "" || campoEmail2.trim() === "" || campoPass2.trim() === "") {
+//     if(campoUser.trim() === "" || campoUser.trim() === null || campoEmail2.trim() === "" || campoEmail2.trim() === null || campoPass2.trim() === "" || campoPass2.trim() == null) {
 //         event.preventDefault();
 //         alert("Todos os campos são obrigatórios. Por favor, preencha-os");
 //     }
@@ -87,35 +174,33 @@ const alertReg = document.getElementById("alertReg");
 //     }
 // });
 
-btnMenu.addEventListener('click', ()=> {
-    nav.classList.toggle('active-menu');
-});
+// btnMenu.addEventListener('click', ()=> {
+//     nav.classList.toggle('active-menu');
+// });
 
-const icon = document.querySelector('.iconUser');
-const userPopup = document.querySelector('.userPopup');
 
- btn1.addEventListener('click', ()=> {
-     wrapper.classList.remove('active-popup');
-     box.classList.remove('active-popup');
-     back.classList.remove('active-blur'); 
-     btnPopup.classList.add('active');
-     btnPopup.textContent = "";
-     icon.classList.add('active');
-     header.classList.remove('active');
-     document.body.style.overflowY = "visible";
- });
+//  btn1.addEventListener('click', ()=> {
+//      wrapper.classList.remove('active-popup');
+//      box.classList.remove('active-popup');
+//      back.classList.remove('active-blur'); 
+//      btnPopup.classList.add('active');
+//      btnPopup.textContent = "";
+//      icon.classList.add('active');
+//      header.classList.remove('active');
+//      document.body.style.overflowY = "visible";
+//  });
 
- btn2.addEventListener('click', ()=> {
-     wrapper.classList.remove('active');
-     wrapper.classList.remove('active-popup');
-     box.classList.remove('active-popup');
-     back.classList.remove('active-blur'); 
-     btnPopup.classList.add('active');
-     btnPopup.textContent = "";
-     icon.classList.add('active');
-     header.classList.remove('active');
-     document.body.style.overflowY = "visible";
-});
+//  btn2.addEventListener('click', ()=> {
+//      wrapper.classList.remove('active');
+//      wrapper.classList.remove('active-popup');
+//      box.classList.remove('active-popup');
+//      back.classList.remove('active-blur'); 
+//      btnPopup.classList.add('active');
+//      btnPopup.textContent = "";
+//      icon.classList.add('active');
+//      header.classList.remove('active');
+//      document.body.style.overflowY = "visible";
+// });
 
 icon.addEventListener('click', ()=> {
     userPopup.classList.toggle('active');

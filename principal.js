@@ -46,9 +46,13 @@ closePopup.addEventListener('click', ()=> {
 function eraseInputs() {
     var forms = document.querySelector('.popup-box');
     var inputs = forms.querySelectorAll('input');
+    var divs = forms.querySelectorAll('[class^="input-box"]');
 
     for(var i = 0; i < inputs.length; i++){
         inputs[i].value = '';
+    }
+    for(i = 0; i < divs.length; i++){
+        divs[i].className = 'input-box';
     }
 }
 

@@ -47,7 +47,7 @@ function eraseInputs() {
     var forms = document.querySelector('.popup-box');
     var inputs = forms.querySelectorAll('input');
     var divs = forms.querySelectorAll('[class^="input-box"]');
-
+    
     for(var i = 0; i < inputs.length; i++){
         inputs[i].value = '';
     }
@@ -56,8 +56,8 @@ function eraseInputs() {
     }
 }
 
-const alertLogin = document.querySelector('.alertLogin');
-const alertReg = document.querySelector('.alertReg');
+var alertLogin = document.querySelector('.alertLogin');
+var alertReg = document.querySelector('.alertReg');
 
 var campoEmail1 = document.getElementById('email-login')
 var campoPass1 = document.getElementById('password-login')
@@ -71,6 +71,8 @@ alertLogin.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkInputsLogin();
+
+    verifyLog();
 });
 
 alertReg.addEventListener('submit', (e) => {
@@ -78,6 +80,8 @@ alertReg.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkInputsRegister();
+
+    verifyReg();
 });
 
 
@@ -87,7 +91,7 @@ function checkInputsLogin() {
     const campoPass1Value = campoPass1.value.trim();
        
     if(campoEmail1Value === '') {
-        errorValidation(campoEmail1, 'Preencha esse campo')
+        errorValidation(campoEmail1, 'This field is required')
     }
 
     else {
@@ -95,7 +99,7 @@ function checkInputsLogin() {
     }
 
     if(campoPass1Value === '') {
-        errorValidation(campoPass1, 'Preencha esse campo');
+        errorValidation(campoPass1, 'This field is required');
     }
     
     else {
@@ -110,8 +114,7 @@ function checkInputsRegister() {
     const campoPass2Value = campoPass2.value.trim();
        
     if(campoUserValue === '') {
-        errorValidation(campoUser, 'Preencha esse campo')
-        alert('a');
+        errorValidation(campoUser, 'This field is required')
     }
     
     else {
@@ -119,7 +122,7 @@ function checkInputsRegister() {
     }
 
     if(campoEmail2Value === '') {
-        errorValidation(campoEmail2, 'Preencha esse campo')
+        errorValidation(campoEmail2, 'This field is required')
     }
     
     else {
@@ -127,7 +130,7 @@ function checkInputsRegister() {
     }
 
     if(campoPass2Value === '') {
-        errorValidation(campoPass2, 'Preencha esse campo')
+        errorValidation(campoPass2, 'This field is required')
     }
     
     else {
@@ -156,24 +159,63 @@ function successValidation(input) {
 
 }
 
-const icon = document.querySelector('.iconUser');
-const userPopup = document.querySelector('.userPopup');
+function verifyLog() {
+        
+        var logindivs = alertLogin.querySelectorAll('[class^="input-box"]');
+        var cont = 0;
+    
+        for(var i = 0; i < logindivs.length; i++){
+            if(logindivs[i].classList.contains('success')){
+                cont += 1;
+            }
+        }
+    
+        if(cont === logindivs.length){
+            wrapper.classList.remove('active');
+            wrapper.classList.remove('active-popup');
+            box.classList.remove('active-popup');
+            back.classList.remove('active-blur'); 
+            header.classList.remove('active');
+            btnPopup.classList.add('active');
+            btnPopup.textContent = "";
+            icon.classList.add('active');
+            document.body.style.overflowY = "visible";
+        }
+};
+
+function verifyReg() {
+        
+        var logindivs = alertReg.querySelectorAll('[class^="input-box"]');
+        var cont = 0;
+        
+        for(var i = 0; i < logindivs.length; i++){
+            if(logindivs[i].classList.contains('success')){
+                    cont += 1;
+            }
+        }
+        
+        if(cont === logindivs.length){
+            wrapper.classList.remove('active');
+            wrapper.classList.remove('active-popup');
+            box.classList.remove('active-popup');
+            back.classList.remove('active-blur'); 
+            header.classList.remove('active');
+            btnPopup.classList.add('active');
+            btnPopup.textContent = "";
+            icon.classList.add('active');
+        }
+};    
+
+
 
 
 // btn2.addEventListener("submit", function(event){
-//     if(campoUser.trim() === "" || campoUser.trim() === null || campoEmail2.trim() === "" || campoEmail2.trim() === null || campoPass2.trim() === "" || campoPass2.trim() == null) {
+    //     if(campoUser.trim() === "" || campoUser.trim() === null || campoEmail2.trim() === "" || campoEmail2.trim() === null || campoPass2.trim() === "" || campoPass2.trim() == null) {
 //         event.preventDefault();
 //         alert("Todos os campos são obrigatórios. Por favor, preencha-os");
 //     }
 //     else{
 //         btn2.addEventListener('click', ()=> {
-//             wrapper.classList.remove('active');
-//             wrapper.classList.remove('active-popup');
-//             box.classList.remove('active-popup');
-//             back.classList.remove('active-blur'); 
-//             btnPopup.classList.add('active');
-//             btnPopup.textContent = "";
-//             icon.classList.add('active');
 //         });
 //     }
 // });
@@ -193,15 +235,18 @@ const userPopup = document.querySelector('.userPopup');
 
 //  btn2.addEventListener('click', ()=> {
     //      wrapper.classList.remove('active');
-//      wrapper.classList.remove('active-popup');
-//      box.classList.remove('active-popup');
-//      back.classList.remove('active-blur'); 
-//      btnPopup.classList.add('active');
-//      btnPopup.textContent = "";
-//      icon.classList.add('active');
-//      header.classList.remove('active');
-//      document.body.style.overflowY = "visible";
-// });
+    //      wrapper.classList.remove('active-popup');
+    //      box.classList.remove('active-popup');
+    //      back.classList.remove('active-blur'); 
+    //      btnPopup.classList.add('active');
+    //      btnPopup.textContent = "";
+    //      icon.classList.add('active');
+    //      header.classList.remove('active');
+    //      document.body.style.overflowY = "visible";
+    // });
+    
+    const icon = document.querySelector('.iconUser');
+    const userPopup = document.querySelector('.userPopup');
 
 btnMenu.addEventListener('click', ()=> {
     nav.classList.toggle('active-menu');

@@ -204,53 +204,14 @@ function verifyReg() {
             btnPopup.textContent = "";
             icon.classList.add('active');
         }
-};    
-
-
-
-
-// btn2.addEventListener("submit", function(event){
-    //     if(campoUser.trim() === "" || campoUser.trim() === null || campoEmail2.trim() === "" || campoEmail2.trim() === null || campoPass2.trim() === "" || campoPass2.trim() == null) {
-//         event.preventDefault();
-//         alert("Todos os campos são obrigatórios. Por favor, preencha-os");
-//     }
-//     else{
-//         btn2.addEventListener('click', ()=> {
-//         });
-//     }
-// });
-
-
-
-//  btn1.addEventListener('click', ()=> {
-//      wrapper.classList.remove('active-popup');
-//      box.classList.remove('active-popup');
-//      back.classList.remove('active-blur'); 
-//      btnPopup.classList.add('active');
-//      btnPopup.textContent = "";
-//      icon.classList.add('active');
-//      header.classList.remove('active');
-//      document.body.style.overflowY = "visible";
-//  });
-
-//  btn2.addEventListener('click', ()=> {
-    //      wrapper.classList.remove('active');
-    //      wrapper.classList.remove('active-popup');
-    //      box.classList.remove('active-popup');
-    //      back.classList.remove('active-blur'); 
-    //      btnPopup.classList.add('active');
-    //      btnPopup.textContent = "";
-    //      icon.classList.add('active');
-    //      header.classList.remove('active');
-    //      document.body.style.overflowY = "visible";
-    // });
-    
-    const icon = document.querySelector('.iconUser');
-    const userPopup = document.querySelector('.userPopup');
+};   
 
 btnMenu.addEventListener('click', ()=> {
     nav.classList.toggle('active-menu');
 });
+
+const icon = document.querySelector('.iconUser');
+const userPopup = document.querySelector('.userPopup');
 
 icon.addEventListener('click', ()=> {
     userPopup.classList.toggle('active');

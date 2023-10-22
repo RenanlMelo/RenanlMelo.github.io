@@ -12,6 +12,26 @@ const scroll = document.querySelector('.scroll-section');
 const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 
+// Nav update
+
+
+document.querySelectorAll('a.nav').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      var headerSize = header.clientHeight;
+      const targetId = this.getAttribute('href').substring(1); // Remove o "#" do href
+      const targetElement = document.getElementById(targetId);
+  
+      if (targetElement) {
+        const offset = targetElement.offsetTop - headerSize; // Centralizar na tela
+        window.scrollTo({
+          top: offset,
+        });
+      }
+    });
+  });
+  
+// switch between register and login
 registerLink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
 });
@@ -20,6 +40,7 @@ loginLink.addEventListener('click', ()=> {
     wrapper.classList.remove('active');
 });
 
+//open and close popUp 
 btnPopup.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup');
     box.classList.add('active-popup');
@@ -43,6 +64,7 @@ closePopup.addEventListener('click', ()=> {
     eraseInputs();
 });
 
+//erase inputs whe close popUp
 function eraseInputs() {
     var forms = document.querySelector('.popup-box');
     var inputs = forms.querySelectorAll('input');
@@ -56,6 +78,7 @@ function eraseInputs() {
     }
 }
 
+//error messages
 var alertLogin = document.querySelector('.alertLogin');
 var alertReg = document.querySelector('.alertReg');
 
@@ -206,8 +229,10 @@ function verifyReg() {
         }
 };   
 
+//menu with media query
 btnMenu.addEventListener('click', ()=> {
     nav.classList.toggle('active-menu');
+    userPopup.classList.remove('active');
 });
 
 const icon = document.querySelector('.iconUser');
@@ -217,20 +242,21 @@ icon.addEventListener('click', ()=> {
     userPopup.classList.toggle('active');
 });
 
-function inicia(){
-    document.getElementById("btnAdd").addEventListener("click", function(){
-        var list = document.getElementById("list");
-        var postPopup = document.createElement("postPopup");
-        // var item = document.getElementById("itemName");
-        var description = document.getElementById("descPost").value;
-        // var image = document.getElementById("picture");
-        postPopup.textContent = description;
-        list.appendChild(postPopup);
-        description = "";
-        description.focus();
-    })
-}
+//new post function
+// function inicia(){
+//     document.getElementById("btnAdd").addEventListener("click", function(){
+//         var list = document.getElementById("list");
+//         var postPopup = document.createElement("postPopup");
+//         // var item = document.getElementById("itemName");
+//         var description = document.getElementById("descPost").value;
+//         // var image = document.getElementById("picture");
+//         postPopup.textContent = description;
+//         list.appendChild(postPopup);
+//         description = "";
+//         description.focus();
+//     })
+// }
 
-window.addEventListener("load", inicia);
+// window.addEventListener("load", inicia);
 
-const newPost = document.getElementById("list");
+// const newPost = document.getElementById("list");

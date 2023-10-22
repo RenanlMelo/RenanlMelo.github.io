@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    border:0;
+    border: 0;
     font-family: Poppins;
 }
 
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: url("https://rare-gallery.com/uploads/posts/503038-constructing.jpg") no-repeat;
+    background: url(assets/Background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -767,22 +767,22 @@ section {
     }
 
     .text h1{
-        font-size: 3vw;
+        font-size: 2.75vw;
     }
 
     .text p{
-        font-size: 2vw;
+        font-size: 1.75vw;
     }
 
     a.pages {
-        width: 24%;
+        width: 26%;
     }
 
     a.pages p{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2vw;
+        font-size: 1.75vw;
     }
 
     #contact{

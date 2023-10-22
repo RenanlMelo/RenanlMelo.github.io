@@ -423,7 +423,7 @@ section {
 .text {
     width: 80%;
     height: auto;
-    margin: 6vh 5vw;
+    margin: 10vh 5vw;
     padding: 8vh 5vw;
     color: white;
     box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.75);
@@ -804,7 +804,11 @@ section {
         right: 0;
         top: calc(12vh + 5vw);
         width: 45vw;
-        height: calc(50vh - 55px);
+        height: calc(40vh - 55px);
+    }
+
+    .navigation.active-menu .nav, .navigation.active-menu button{
+        font-size: 3vw;
     }
 
     .scroll-section, .scroll-section section {

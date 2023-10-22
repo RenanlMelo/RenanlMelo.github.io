@@ -690,13 +690,12 @@ section {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .btnMenu {
         display: block;
     }
 
     #cabecalho { 
-        padding: 2.5vw 3vw;
         justify-content: space-between;
     }
     
@@ -706,7 +705,7 @@ section {
 
     .navigation {
         right: 0;
-        top: calc(17.5vh + 5vw);
+        top: 17.5vh;
         padding: 0;
         margin: 0;
         background-color: #162938;
@@ -747,6 +746,10 @@ section {
     .navigation.active-menu {
         transform: translateX(0%);
         overflow-y: hidden;
+    }
+
+    .navigation.active-menu button, .navigation.active-menu .nav{
+        font-size: 2vw;
     }
 
     .navigation.active-menu a::after {
@@ -824,8 +827,8 @@ section {
     }
 
     .text p{
-        font-size: 2.5vw;
-        line-height: 3vh;
+        font-size: 3.25vw;
+        line-height: 2.75vh;
     }
 
     #products{
@@ -849,7 +852,7 @@ section {
         align-items: center;
         width: auto;
         padding: 1vh 3vw;
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .contatos{

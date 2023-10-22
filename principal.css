@@ -697,6 +697,7 @@ section {
 
     #cabecalho { 
         justify-content: space-between;
+        height: 21vh;
     }
     
     #logo {
@@ -705,7 +706,7 @@ section {
 
     .navigation {
         right: 0;
-        top: 17.5vh;
+        top: 21vh;
         padding: 0;
         margin: 0;
         background-color: #162938;
@@ -746,6 +747,7 @@ section {
     .navigation.active-menu {
         transform: translateX(0%);
         overflow-y: hidden;
+        border-radius: 0 0 0 10px ;
     }
 
     .navigation.active-menu button, .navigation.active-menu .nav{
@@ -800,18 +802,18 @@ section {
 
     #cabecalho {
         justify-content: space-around;
-        height: 12vh;
+        height: 15vh;
     }
 
     .navigation {
         right: 0;
-        top: calc(12vh + 5vw);
+        top: 15vh;
         width: 45vw;
         height: calc(40vh - 55px);
     }
 
     .navigation.active-menu .nav, .navigation.active-menu button{
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .scroll-section, .scroll-section section {

@@ -819,21 +819,37 @@ section {
         height: auto;
     }
 
+    .text h1{
+        font-size: 4.25vw;
+    }
+
     .text p{
         font-size: 2.5vw;
         line-height: 3vh;
     }
 
+    #products{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
      a.pages {
-        width: 24%;
-        margin: 7.5vh 0 7.5vh 0;
+        width: 65%;
+        margin: 7.5vh 0 0 0;
+    }
+
+    a.pages:nth-child(3){
+        margin-bottom: 7.5vh;
     }
 
     a.pages p{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.35vw;
+        width: auto;
+        padding: 1vh 3vw;
+        font-size: 3vw;
     }
 
     .contatos{

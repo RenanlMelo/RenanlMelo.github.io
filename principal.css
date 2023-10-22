@@ -44,6 +44,7 @@ body {
 
 #cabecalho.active{
     filter: blur(15px);
+    -webkit-filter: blur(15px);
 }
 
 #logo {
@@ -160,6 +161,7 @@ body {
 
 .back.back.active-blur .scroll-section {
     filter: blur(15px);
+    -webkit-filter: blur(15px);
 }
 
 .wrapper .form-box {

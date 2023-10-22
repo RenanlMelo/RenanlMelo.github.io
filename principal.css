@@ -36,8 +36,9 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    background: #162938a6;
+    background: #091015a6;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     transition: .3s;
 }
 
@@ -123,6 +124,7 @@ body {
     height: 450px;
     border: 2px solid white;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -152,6 +154,7 @@ body {
 .back.active-blur {
     z-index: 90;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     transition: .3s ease;
 }
 

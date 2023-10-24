@@ -243,20 +243,73 @@ icon.addEventListener('click', ()=> {
 });
 
 //new post function
-// function inicia(){
-//     document.getElementById("btnAdd").addEventListener("click", function(){
-//         var list = document.getElementById("list");
-//         var postPopup = document.createElement("postPopup");
-//         // var item = document.getElementById("itemName");
-//         var description = document.getElementById("descPost").value;
-//         // var image = document.getElementById("picture");
-//         postPopup.textContent = description;
-//         list.appendChild(postPopup);
-//         description = "";
-//         description.focus();
-//     })
-// }
 
-// window.addEventListener("load", inicia);
+const list = document.getElementById("postList");
+const inputs = document.getElementById("inputs");
+const postButton = document.getElementById("newPost");
+const submitPost = document.getElementById("postItem");
+var i = 0;
 
-// const newPost = document.getElementById("list");
+postButton.addEventListener("click", function() {
+
+    userPopup.classList.remove('active');
+
+    postItem();
+    
+});
+
+function postItem(){
+    var post = document.createElement("div");
+    post.textContent = "aaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    post.style.background = "red";
+    post.style.width = "100%";
+    post.style.height = "50vh";
+    list.appendChild(post);
+    post.appendChild(inputs);
+    post.classList.add('post');
+    alert('a');
+    i += 1;
+    postButton.onclick = nextPage(i);
+}
+
+function nextPage(i){
+    if(i === 2){
+        // Crie um novo elemento de página
+        const newPage = document.createElement('div');
+        newPage.className = 'page';
+        // Adicione conteúdo à nova página
+        newPage.innerHTML = 'Conteúdo da nova página';
+        // Adicione a nova página ao documento
+        document.body.appendChild(newPage);
+    }
+}
+
+// Selecione todos os elementos <input> na página
+const formInputs = document.querySelectorAll('input');
+
+// Itere por todos os elementos <input> e adicione os ouvintes de eventos a cada um
+formInputs.forEach(function (input) {
+    const label = input.nextElementSibling;
+
+    input.addEventListener('focus', function () {
+        label.style.top = 0;
+        label.style.fontSize = '0.9em';
+    });
+
+    input.addEventListener('blur', function () {
+        if (input.value.length === 0) {
+            label.style.top = '';
+            label.style.fontSize = '';
+        }
+    });
+
+    input.addEventListener('input', function () {
+        if (input.value.length > 0) {
+            label.style.top = 0;
+            label.style.fontSize = '0.9em';
+        } else {
+            label.style.top = '';
+            label.style.fontSize = '';
+        }
+    });
+});

@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: url(assets/Background.jpg) no-repeat;
+    background: url(/assets/Background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -393,14 +393,17 @@ p {
 
 .scroll-section {
     position: absolute;
-    max-width: 100%;
+    width: 100%;
     top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 section {
     margin: 0;
     padding: 0;
-    width: 100vw;
     box-sizing: border-box;
 }
 
@@ -414,89 +417,6 @@ section {
     justify-content: center;
     align-items: center;
 }
-
-#about{
-    z-index: 100;
-    margin-top: 100vh;
-    height: auto;
-    background-color: #dddddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text {
-    width: 80%;
-    height: auto;
-    margin: 10vh 5vw;
-    padding: 8vh 5vw;
-    color: white;
-    box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.75);
-    background-color: #162938;
-    border-radius: 10px;
-}
-
-.text h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 2vw;
-}
-
-.text p{
-    margin: 2vh 0 0 0;
-    text-indent: 2em;
-    text-align: justify;
-    font-size: 1.1vw;
-    line-height: 30px;
-}
-
-#products{
-    z-index: 100;
-    height: auto;
-    width: 100%;
-    background-color: #162938;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.pages{
-    margin: 15vh 0 15vh 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 18%;
-    height: auto;
-    border-radius: 10px;
-    transform: scale(1);
-    transition: all .3s;
-    background-position: center;
-    aspect-ratio: auto 1 / 1;
-}
-
-.pages:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 5px #64646499, 0 0 15px #64646499, 0 0 30px #64646499, 0 0 20px #64646499;
-}
-
-.pages p{
-    position: absolute;
-    bottom: 0;
-    color: #ffffff;
-    font-size: 1.2vw;
-    font-weight: 700;
-    height: 10%;
-    border-radius: 10px 10px 0 0;
-    padding: 1vh 0.5vw;
-    background: #5ca89b;
-    transition: all .3s;
-    background-size: cover;
-}
-
-.pages:hover p{
-    background: #213c51;
-}
-
 
 #contact{
     z-index: 100;
@@ -625,15 +545,7 @@ section {
     text-decoration: underline;
 }
 
-/* POST */
-#list {
-    display: none;
-    background: white;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 50%;
-}
+/* Inputs verification*/
 
 .iconsuccess {
     font-size: 20px;
@@ -767,29 +679,6 @@ section {
         margin: 0;
     }
 
-    .text{
-        height: auto;
-    }
-
-    .text h1{
-        font-size: 2.75vw;
-    }
-
-    .text p{
-        font-size: 1.75vw;
-    }
-
-    a.pages {
-        width: 26%;
-    }
-
-    a.pages p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.75vw;
-    }
-
     #contact{
         height: 150px;
     }
@@ -825,44 +714,15 @@ section {
         width: 100%;
     }
 
-    .text{
-        height: auto;
-    }
-
-    .text h1{
-        font-size: 4.25vw;
-    }
-
-    .text p{
-        font-size: 3.25vw;
-        line-height: 2.75vh;
-    }
-
-    #products{
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-     a.pages {
-        width: 65%;
-        margin: 7.5vh 0 0 0;
-    }
-
-    a.pages:nth-child(3){
-        margin-bottom: 7.5vh;
-    }
-
-    a.pages p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        padding: 1vh 3vw;
-        font-size: 3.5vw;
-    }
-
     .contatos{
         font-size: x-large;
     }
+}
+
+#postList {
+    /* display: none; */
+    background: red;
+    width: 80%;
+    height: 50vh;
+    margin-top: 17.5vh;
 }

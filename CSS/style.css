@@ -35,6 +35,8 @@
 #fileDiv:hover{
   transform: scale(1.05);
   box-shadow: 0 0 8px 0 white;
+  background: #212529;
+  color: white;
 }
 
 .form-input-file[type="file"]{
@@ -45,10 +47,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  background: #272727;
   transform: scale(1);
-  transition: .3s;
+  transition: .15s;
   cursor: pointer;
 }
 
@@ -71,11 +71,26 @@
 
 @media (max-width: 767px){
     .title{
-      font-size: 4.5vw;
+      font-size: 5.5vw;
+    }
+
+    #header{
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     #Area{
-      width: 80%;
+      width: 100%;
+    }
+
+    #container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 0 30px 0 rgb(1, 1, 1);
+      width: 100%;
     }
 
     form{

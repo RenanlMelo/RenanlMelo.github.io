@@ -243,7 +243,6 @@ icon.addEventListener('click', ()=> {
 });
 
 //new post function
-
 const list = document.getElementById("postList");
 const inputs = document.getElementById("inputs");
 const postButton = document.getElementById("newPost");

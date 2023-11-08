@@ -200,7 +200,6 @@ function verifyLog() {
             back.classList.remove('active-blur'); 
             header.classList.remove('active');
             btnPopup.classList.add('active');
-            btnPopup.textContent = "";
             icon.classList.add('active');
             document.body.style.overflowY = "visible";
         }
@@ -238,54 +237,26 @@ btnMenu.addEventListener('click', ()=> {
 
 const icon = document.querySelector('.iconUser');
 const userPopup = document.querySelector('.userPopup');
+const arrow = document.getElementById('arrow');
+const signout = document.getElementById('signOut');
 
 icon.addEventListener('click', ()=> {
     userPopup.classList.toggle('active');
     nav.style.height = "25vh";
 });
 
-
-
-//new post function
-const list = document.getElementById("postList");
-const inputs = document.getElementById("inputs");
-const postButton = document.getElementById("newPost");
-const submitPost = document.getElementById("postItem");
-var i = 0;
-
-postButton.addEventListener("click", function() {
-
-    userPopup.classList.remove('active');
-
-    postItem();
-    
+arrow.addEventListener('click', ()=> {
+    nav.style.height = "50vh";
+    userPopup.classList.toggle('active');
 });
 
-function postItem(){
-    var post = document.createElement("div");
-    post.textContent = "aaaaaaaaaaaaaaaaaaaaaaaaaaa";
-    post.style.background = "red";
-    post.style.width = "100%";
-    post.style.height = "50vh";
-    list.appendChild(post);
-    post.appendChild(inputs);
-    post.classList.add('post');
-    alert('a');
-    i += 1;
-    postButton.onclick = nextPage(i);
-}
-
-function nextPage(i){
-    if(i === 2){
-        // Crie um novo elemento de página
-        const newPage = document.createElement('div');
-        newPage.className = 'page';
-        // Adicione conteúdo à nova página
-        newPage.innerHTML = 'Conteúdo da nova página';
-        // Adicione a nova página ao documento
-        document.body.appendChild(newPage);
-    }
-}
+signout.addEventListener('click', ()=> {
+    nav.classList.remove('active-menu');
+    userPopup.classList.remove('active');
+    btnPopup.classList.remove('active');
+    icon.classList.remove('active');
+    eraseInputs();
+})
 
 // Selecione todos os elementos <input> na página
 const formInputs = document.querySelectorAll('input');

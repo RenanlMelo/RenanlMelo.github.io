@@ -85,6 +85,7 @@ body {
 }
 
 .navigation .btnLogin-popup {
+    display: block;
     padding: 1vh 3vw;
     background: transparent;
     border: 2px solid #fff;
@@ -543,7 +544,7 @@ section {
     }
     
     /*AFTER LOGIN*/
-.btnLogin-popup.active {
+.navigation .btnLogin-popup.active {
         display: none;
 }
 
@@ -551,11 +552,11 @@ section {
     display: none;
 }
 
-
-.iconUser.active {
+.iconUser.md.hydrated.active {
     display: block;
-    height: 20%;
-    width: 30%;
+    height: 50px;
+    width: 50px;
+    margin: 0 0 0 40px;
     bottom: 0;
     color: #ffffff;
     cursor: pointer;
@@ -617,6 +618,22 @@ section {
 .userPopup.active p:hover, .userPopup.active a:hover {
     transform: scale(1.15);
     text-decoration: underline;
+}
+
+#arrow{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    padding: 1vh 0.5vw;
+    border: 1px solid white;
+    border-radius: 0 0 20px 0;
+    transition: all 0.3s;
+}
+
+#arrow:hover{
+    background: rgb(228, 228, 228);
+    color: #162938;
 }
 
 /* inputs verification */
@@ -736,8 +753,12 @@ section {
     
     .navigation.active-menu {
         transform: translateX(0%);
-        overflow-y: hidden;
+        overflow: hidden;
         border-radius: 0 0 0 10px ;
+    }
+
+    .navigation .btnLogin-popup, .navigation .nav{
+        font-size: 2vw;
     }
 
     .navigation.active-menu button, .navigation.active-menu .nav{
@@ -749,6 +770,7 @@ section {
     }
 
     .userPopup.active{
+        overflow: hidden;
         width: 100%;
         height: 100%;
         top: 0;
@@ -760,6 +782,10 @@ section {
 
     .iconUser.md.hydrated.active {
         margin: 0;
+    }
+
+    #arrow{
+        display: block;
     }
 
     .text{
@@ -812,6 +838,10 @@ section {
         height: calc(40vh - 55px);
     }
 
+    .navigation .nav, .navigation .btnLogin-popup{
+        font-size: 3.5vw;
+    }
+
     .navigation.active-menu .nav, .navigation.active-menu button{
         font-size: 3.5vw;
     }
@@ -820,6 +850,10 @@ section {
         width: 100%;
         height: 100%;
         border: 0;
+    }
+
+    #arrow{
+        font-size: 7vw;
     }
 
     .userPopup.active a, .userPopup.active p{

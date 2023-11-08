@@ -233,6 +233,7 @@ function verifyReg() {
 btnMenu.addEventListener('click', ()=> {
     nav.classList.toggle('active-menu');
     userPopup.classList.remove('active');
+    nav.style.height = "50vh";
 });
 
 const icon = document.querySelector('.iconUser');
@@ -240,7 +241,10 @@ const userPopup = document.querySelector('.userPopup');
 
 icon.addEventListener('click', ()=> {
     userPopup.classList.toggle('active');
+    nav.style.height = "25vh";
 });
+
+
 
 //new post function
 const list = document.getElementById("postList");

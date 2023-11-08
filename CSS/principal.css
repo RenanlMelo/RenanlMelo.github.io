@@ -554,9 +554,9 @@ section {
 
 .iconUser.active {
     display: block;
-    width: 50px;
-    height: 50px;
-    margin: 0 0 0 40px;
+    height: 20%;
+    width: 30%;
+    bottom: 0;
     color: #ffffff;
     cursor: pointer;
     transition: .3s;
@@ -701,7 +701,7 @@ section {
         margin: 0;
         background-color: #162938;
         width: 30vw;
-        height: calc(50vh);
+        height: 50vh;
         border: 2px solid #eee;
         box-shadow: 0px 15px 30px -1px rgba(0,0,0,0.75);
         overflow-x: hidden;
@@ -746,6 +746,16 @@ section {
 
     .navigation.active-menu a::after {
         background-color:  transparent;
+    }
+
+    .userPopup.active{
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+
+    .userPopup.active a, .userPopup.active p{
+        font-size: 2.5vw;
     }
 
     .iconUser.md.hydrated.active {
@@ -803,6 +813,16 @@ section {
     }
 
     .navigation.active-menu .nav, .navigation.active-menu button{
+        font-size: 3.5vw;
+    }
+
+    .userPopup.active{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .userPopup.active a, .userPopup.active p{
         font-size: 3.5vw;
     }
 

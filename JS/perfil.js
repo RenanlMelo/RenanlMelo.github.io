@@ -1,18 +1,29 @@
+function getURLData() {
+    var urlParams = new URLSearchParams(window.location.search);
+    const data1 = urlParams.get("item");
+    const data2 = urlParams.get("category");
+    const data3 = urlParams.get("price");
+    const data4 = urlParams.get("description");
 
-function inicia(){
-    document.getElementById("btnAdd").addEventListener("click", function(){
-        var list = document.getElementById("list");
-        var postPopup = document.createElement("postPopup");
-        // var item = document.getElementById("itemName");
-        var description = document.getElementById("descPost").value;
-        // var image = document.getElementById("picture");
-        postPopup.textContent = description;
-        list.appendChild(postPopup);
-        description = "";
-        description.focus();
-    })
+    if(data1 && data2 && data3 && data4 ){
+        decode1 = decodeURIComponent(data1);
+        decode2 = decodeURIComponent(data2);
+        decode3 = decodeURIComponent(data3);
+        decode4 = decodeURIComponent(data4);
+    }
+
+    return { decode1, decode2, decode3, decode4 };
 }
 
-window.addEventListener("load", inicia);
+function load(){
+    const imagePath = window.localStorage.getItem("file");
+    const image = document.querySelector("#image");
+    image.src = "../HTML/" + imagePath;
+}
 
-const newPost = document.getElementById("list");
+    const { decode1, decode2, decode3, decode4 } = getURLData;
+
+    console.log(decode1);
+    console.log(decode2);
+    console.log(decode3);
+    console.log(decode4);

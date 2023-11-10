@@ -16,6 +16,8 @@
   padding-top: 9.75px;
   font-size: calc(3vw - 27.5%);
   font-weight: 700;
+  text-decoration: none;
+  color: white;
 }
 
 #div{

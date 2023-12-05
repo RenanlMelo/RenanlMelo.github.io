@@ -16,4 +16,4 @@ The main idea is to allow people to sell their surplus materials, reducing waste
 ## Back-end
 - XAMPP
 - phpmyadmin
-- PHP
+- PHPc

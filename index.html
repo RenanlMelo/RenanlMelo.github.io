@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/principal.css">
+    <title>Contruchó - Upx</title>
+</head>
+<body>
+    <div class="back">
+        <header id="cabecalho">
+            <h2 id="logo">Construchó</h2>
+            <button class="btnMenu"><ion-icon name="menu" id="menuIcon"></ion-icon></button>
+            <nav class="navigation">
+                    <a class="nav" href="#home">Início</a>
+                    <a class="nav" href="#about">Sobre</a>
+                    <a class="nav" href="#products">Produtos</a>
+                    <a class="nav" href="#contact">Contato</a>
+                    <button class="btnLogin-popup">Acesso</button>
+                    <ion-icon type="button" name="person-circle" class="iconUser"></ion-icon>
+                    <div class="userPopup">
+                        <ion-icon id="arrow" name="arrow-back-outline"></ion-icon>
+                        <p><a href="/HTML/perfil.php">Perfil</a></p>
+                        <p id="newPost"><a href="HTML/newpost.html">Novo Post</a></p>
+                        <p id="signOut"> Sair </p>
+                    </div>
+                </nav>
+            </header>
+            
+            <div class="popup-box">
+                
+                <div class="wrapper">
+                    <span class="close">
+                        <ion-icon name="close"></ion-icon>
+                    </span>
+                     <!-- LOGIN -->
+                    <div class="form-box login">
+                        <h2>Acesso</h2>
+                            <form action="/PHP/login.php" method="post" class="alertLogin">
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                    <input type="email" autocomplete="off" id="email-login" name="email-login">
+                                    <label for="email-login">Email</label>
+                                    <small class="small">Mensagem de erro</small>
+                                    <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                                    <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                    <input type="password" id="password-login" name="password-login">
+                                    <label for="password-login">Senha</label>
+                                    <small class="small">Mensagem de erro</small>
+                                    <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                                    <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
+                                </div>
+                                <div class="remember-forgot">
+                                    <label><input id="check" type="checkbox">
+                                        Manter informações
+                                    </label>
+                                    <a href="#">Esqueci a senha</a>
+                                </div>
+                                <input type="click" class="btn1" value="Login"></button>
+                                <div class="login-register">
+                                    <p>Não tem uma conta? <a href="#" class="registerLink">Registro</a></p>
+                            </div>
+                        </form>
+                        
+                    </div>
+                
+                    <!-- REGISTER -->
+                    <div class="form-box register">
+                        <h2>Registro</h2>
+                            <form action="/PHP/NovoUsu.php" method="post" class="alertReg">
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                                    <input type="text" autocomplete="0ff" id="username" class="username" name="username">
+                                    <label>Usuário</label>
+                                    <small class="small">Mensagem de erro</small>
+                                    <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                                    <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                    <input type="email" autocomplete="off" id="email-register" name="email-register">
+                                    <label>Email</label>
+                                    <small class="small">Mensagem de erro</small>
+                                    <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                                    <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
+                                </div>
+                                <div class="input-box">
+                                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                    <input type="password" id="password-register" name="password-register">
+                                    <label>Senha</label>
+                                    <small class="small">Mensagem de erro</small>
+                                    <ion-icon class="iconsuccess" name="checkmark-circle"></ion-icon>
+                                    <ion-icon class="iconerror" name="alert-circle"></ion-icon>
+
+                                </div>
+                                <div class="remember-forgot">
+                                    <label><input type="checkbox">
+                                        Eu concordo com os termos e condições
+                                    </label>
+                                </div>
+                                <input type="button" class="btn2" value="Register"></button>
+                                <div class="login-register">
+                                    <p>Não tem uma conta? <a href="#" class="loginLink">Acesso</a></p>
+                                </div>
+                            </form>
+                            
+                    </div>
+                
+                </div> 
+            </div><!-- div box -->
+            <div class="scroll-section">
+                <section class="section" id="home"> 
+                </section>
+                <section class="section" id="about"><div class="text"><h1>Brechó de Materiais de Construção</h1><br><p>A "Construchó" é um marketplace inovador que oferece uma experiência única para clientes interessados em materiais de construção. Combinando a ideia de um brechó com o setor de construção, a Construchó se destaca como um destino para aqueles que buscam alternativas sustentáveis e econômicas para seus projetos de construção e reforma.</p><p>Se você está procurando maneiras de economizar dinheiro, contribuir para a sustentabilidade e encontrar materiais de construção, a Construchó é o seu destino ideal.</p></div></section>
+                <section class="section" id="products">
+                    <a class="pages" href="./HTML/categoria1.php" style="background-image: url(assets/Materiais.jpeg) ;"><p>Materias</p></a>
+                    <a class="pages" href="./HTML/categoria2.php" style="background-image: url(assets/Elétrica-Hidráulica.jpg);"><p>Elétrica/Hidráulica</p></a>
+                    <a class="pages" href="./HTML/categoria3.php" style="background-image: url(assets/Acabamentos.webp);"><p>Acabamento</p></a>
+                </section>
+                <section class="section" id="contact">
+                    <a href=""><ion-icon class="contatos" name="logo-instagram"></ion-icon></a> 
+                    <a href=""><ion-icon class="contatos" name="logo-linkedin"></ion-icon></a> 
+                    <a href=""><ion-icon class="contatos" name="logo-whatsapp"></ion-icon></a> 
+                    <a href=""><ion-icon class="contatos" name="logo-facebook"></ion-icon></a> 
+                </section>
+            </div>
+
+            
+        
+    </div>
+        
+    <script type="text/javascript" src="JS/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="JS/principal.js"></script>
+   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+

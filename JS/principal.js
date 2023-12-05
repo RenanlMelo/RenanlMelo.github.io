@@ -18,6 +18,7 @@ const btn2 = document.querySelector('.btn2');
 document.querySelectorAll('a.nav').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       //e.preventDefault();
+      e.preventDefault();
       var headerSize = header.clientHeight;
       const targetId = this.getAttribute('href').substring(1); // Remove o "#" do href
       const targetElement = document.getElementById(targetId);

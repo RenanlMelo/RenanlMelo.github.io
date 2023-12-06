@@ -14,21 +14,34 @@ const btn2 = document.querySelector('.btn2');
 
 // Nav update
 
+// Scroll to section when navigation link is clicked
+document.querySelectorAll('.nav').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
 
-document.querySelectorAll('a.nav').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      var headerSize = header.clientHeight;
-      const targetId = this.getAttribute('href').substring(1); // Remove o "#" do href
-      const targetElement = document.getElementById(targetId);
-  
-      if (targetElement) {
-        const offset = targetElement.offsetTop - headerSize; // Centralizar na tela
-        window.scrollTo({
-          top: offset,
-        });
-      }
+        if (targetElement) {
+            const headerSize = header.clientHeight;
+            const offset = targetElement.offsetTop - headerSize;
+
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth'
+            });
+        }
     });
-  });
+});
+
+// Scroll to top when logo is clicked
+document.getElementById('logo').addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
   
 // switch between register and login
 registerLink.addEventListener('click', ()=> {

@@ -316,4 +316,3 @@ formInputs.forEach(function (input) {
         }
     });
 });
-

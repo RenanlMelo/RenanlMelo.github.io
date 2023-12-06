@@ -7,8 +7,12 @@ A college project for a website for buying and selling construction materials th
 
 The main idea is to allow people to sell their surplus materials, reducing waste and, consequently, the amount of garbage in the world.
 
-# Tecnologias utilizadas
 ## Front-end
 - HTML
 - CSS
 - JS
+
+## Back-end
+- XAMPP
+- phpmyadmin
+- PHP

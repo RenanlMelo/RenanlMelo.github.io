@@ -1,5 +1,7 @@
 # Upx Project - Construchó 
 
+This repository is only for accessing the structure. To use it, you have to connect with XAMPP and create your own table on PHPMyAdmin. It won't work if you access the website through pages on GitHub.
+
 # About the project
 https://renanlmelo.github.io/Upx_project/
 
